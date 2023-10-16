@@ -1,4 +1,4 @@
-body, h2{
+body, h2, h3{
     margin: 0;
     font-family: 'Times New Roman', Times, serif
 }
@@ -65,11 +65,29 @@ nav a:hover{
     display: grid;
     background: linear-gradient(to right, rgb(107, 101, 101),rgb(34, 32, 32));
     color: white;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
-#menuheading{
+#menuheading, #locheading{
     background: linear-gradient(to right, rgb(107, 101, 101),rgb(34, 32, 32));
     color: white;
     display: flex;
     justify-content: center;
+    color: red;
+}
+table{
+    width: 100%;
+}
+table tr{
+    margin-top: 8em;
+}
+.locations{
+    background: linear-gradient(to right, rgb(107, 101, 101),rgb(34, 32, 32));
+    color: white;
+    display: flex;
+}
+.locations h3{
+    margin-bottom: 1em;
+}
+.locations div{
+    flex: 1;
 }
