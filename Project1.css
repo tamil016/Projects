@@ -3,7 +3,7 @@ body, h2, h3{
     font-family: 'Times New Roman', Times, serif
 }
 .page1{
-    background-image: url(../Tea.jpg);
+    background-image: url(../Tea1.webp);
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
@@ -12,15 +12,17 @@ body, h2, h3{
 }
 header a{
     text-decoration: none;
-    color: rgb(247, 8, 8);
+    color: rgb(253, 219, 68);
 }
 header{
     display: flex;
     padding: 5px;
+    font-weight: bold;
 }
 #logo{
     flex: 3;
     font-size: 25px;
+    font-weight: bold;
 }
 nav{
     flex: 2;
@@ -30,26 +32,26 @@ nav a{
     flex: 1;
 }
 nav a:hover{
-    color: green;
+    color: white;
 }
 .main{
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 80vh;
     justify-content: center;
     padding: 20px;
 }
 .line1{
-    color: brown;
+    color: white;
     font-size: 35px;
     font-weight: bold;
 }
 .line2{
-    color: white;
+    color: rgb(253, 219, 68);
     font-size: 22px;
 }
 .call{
-    color: rgb(255, 255, 255);
+    color: rgb(253, 219, 68);
 }
 .main div{
     margin-top: 10px;
@@ -58,8 +60,10 @@ nav a:hover{
     width: 18vw;
     border-radius: 10px;
     padding: 5px;
-    color: white;
-    background-color: brown;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(184, 243, 48);
 }
 .menu1{
     display: grid;
@@ -72,7 +76,7 @@ nav a:hover{
     color: white;
     display: flex;
     justify-content: center;
-    color: red;
+    color: rgb(184, 243, 48);
 }
 table{
     width: 100%;
