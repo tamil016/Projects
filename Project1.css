@@ -1,0 +1,75 @@
+body, h2{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+.page1{
+    background-image: url(../Tea.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    opacity: 0.8;
+    color: black;
+}
+header a{
+    text-decoration: none;
+    color: rgb(247, 8, 8);
+}
+header{
+    display: flex;
+    padding: 5px;
+}
+#logo{
+    flex: 3;
+    font-size: 25px;
+}
+nav{
+    flex: 2;
+    display: flex;
+}
+nav a{
+    flex: 1;
+}
+nav a:hover{
+    color: green;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    padding: 20px;
+}
+.line1{
+    color: brown;
+    font-size: 35px;
+    font-weight: bold;
+}
+.line2{
+    color: white;
+    font-size: 22px;
+}
+.call{
+    color: rgb(255, 255, 255);
+}
+.main div{
+    margin-top: 10px;
+}
+.main button{
+    width: 18vw;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    background-color: brown;
+}
+.menu1{
+    display: grid;
+    background: linear-gradient(to right, rgb(107, 101, 101),rgb(34, 32, 32));
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#menuheading{
+    background: linear-gradient(to right, rgb(107, 101, 101),rgb(34, 32, 32));
+    color: white;
+    display: flex;
+    justify-content: center;
+}
