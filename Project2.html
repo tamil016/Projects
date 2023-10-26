@@ -29,14 +29,51 @@
         .image{
             position: absolute;
             top: 200px;
-            left: 70%;
+            left: 68%;
         }
         .image img{
-            height: 50vh;
+            height: 40vh;
             width: 25vw;
         }
         #foot{
             margin-left: 25px;
+        }
+        .image {
+            height: 45vh;
+            width: 30vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .top1{
+            background-color: orangered;
+            height: 5px;
+            width: 30px;
+        }
+        .top2{
+            background-color: orangered;
+            height: 30px;
+            width: 5px;
+        }
+        .top{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .down1{
+            background-color: orangered;
+            height: 5px;
+            width: 30px;
+            position: absolute;
+            bottom: 0;
+        }
+        .down2{
+            background-color: orangered;
+            height: 30px;
+            width: 5px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
     </style>
 </head>
@@ -48,6 +85,14 @@
         </div>
         <div class="image">
             <img src="./Fball2.jfif" alt="">
+            <div class="top">
+                <div class="top1"></div>
+                <div class="top2"></div>
+            </div>
+            <div class="down">
+                <div class="down1"></div>
+                <div class="down2"></div>
+            </div>
         </div>
     </div>
 </body>
