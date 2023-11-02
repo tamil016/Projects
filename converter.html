@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <style>
+        body{
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .main{
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .main input{
+            height: 25px;
+            margin-bottom: 30px;
+        }
+        .main button{
+            background-color: rgb(250, 240, 101);
+            height: 25px;
+        }
+        #result{
+            font-size: 25px;
+            text-align: center;
+            margin-top: 25px;
+        }
+        .main button:hover{
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Cm to inch calculator</h3>
+        <input type="search" id="enter" placeholder="Enter a Value"> <br>
+        <button onclick="convert()">Convert to inch</button>
+        <div id="result">
+            
+        </div>
+    </div>
+
+    <script>
+        function convert(){
+       let cmVal= Number(document.getElementById("enter").value);
+       let inchVal= 0.3937*cmVal;
+    // let result = document.getElementById("result")
+       result.innerHTML= inchVal.toFixed(2)+" inches"
+    }
+        convert()
+    </script>
+</body>
+</html>
