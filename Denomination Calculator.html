@@ -21,11 +21,18 @@
             border-radius: 15px;
             display: flex;
             flex-direction: column;
+
         }
 
         .main input {
             height: 25px;
             margin-bottom: 30px;
+        }
+        #butt{
+            width: 100px;
+        }
+        .butt{
+            padding-left: 90px;
         }
 
         .main button {
@@ -34,7 +41,7 @@
         }
 
         #result {
-            font-size: 25px;
+            font-size: 20px;
             text-align: center;
             margin-top: 25px;
         }
@@ -50,7 +57,7 @@
     <div class="main">
         <h3>Currency calculator</h3>
         <input type="search" id="enter" placeholder="Enter a Value"> <br>
-        <button onclick="convert()">Convert</button>
+        <div class="butt"><button id="butt" onclick="convert()">Convert</button></div>
         <div id="result">
 
         </div>
@@ -59,53 +66,47 @@
     <script>
         function convert() {
             let val = Number(document.getElementById("enter").value);
-            let a, b, c, d, e, f, g, h, i, j; // Variables for denominations
+            let a, b, c, d, e, f, g, h, i, j;
 
-            if (val >= 0) {
-
-                if (val >= 2000) {
-                    a = Math.trunc(val / 2000);
-                    val = val - (2000 * a);
-                }
-                if (val >= 500) {
-                    b = Math.trunc(val / 500);
-                    val = val - (500 * b);
-                }
-                if (val >= 200) {
-                    c = Math.trunc(val / 200);
-                    val = val - (200 * c);
-                }
-                if (val >= 100) {
-                    d = Math.trunc(val / 100);
-                    val = val - (100 * d);
-                }
-                if (val >= 50) {
-                    e = Math.trunc(val / 50);
-                    val = val - (50 * e);
-                }
-                if (val >= 20) {
-                    f = Math.trunc(val / 20);
-                    val = val - (20 * f);
-                }
-                if (val >= 10) {
-                    g = Math.trunc(val / 10);
-                    val = val - (10 * g);
-                }
-                if (val >= 5) {
-                    h = Math.trunc(val / 5);
-                    val = val - (5 * h);
-                }
-                if (val >= 2) {
-                    i = Math.trunc(val / 2);
-                    val = val - (2 * i);
-                }
-                if (val >= 1) {
-                    j = Math.trunc(val / 1);
-                    val = val - (1 * j);
-                }
-
-            } else {
-                console.log("Enter a +ve number");
+            if (val >= 2000) {
+                a = Math.trunc(val / 2000);
+                val = val - (2000 * a);
+            }
+            if (val >= 500) {
+                b = Math.trunc(val / 500);
+                val = val - (500 * b);
+            }
+            if (val >= 200) {
+                c = Math.trunc(val / 200);
+                val = val - (200 * c);
+            }
+            if (val >= 100) {
+                d = Math.trunc(val / 100);
+                val = val - (100 * d);
+            }
+            if (val >= 50) {
+                e = Math.trunc(val / 50);
+                val = val - (50 * e);
+            }
+            if (val >= 20) {
+                f = Math.trunc(val / 20);
+                val = val - (20 * f);
+            }
+            if (val >= 10) {
+                g = Math.trunc(val / 10);
+                val = val - (10 * g);
+            }
+            if (val >= 5) {
+                h = Math.trunc(val / 5);
+                val = val - (5 * h);
+            }
+            if (val >= 2) {
+                i = Math.trunc(val / 2);
+                val = val - (2 * i);
+            }
+            if (val >= 1) {
+                j = Math.trunc(val / 1);
+                val = val - (1 * j);
             }
 
             let result = document.getElementById("result");
