@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB Bill Calculator</title>
+    <style>
+        body {
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .main {
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main input {
+            height: 25px;
+            margin-bottom: 30px;
+        }
+
+        .main button {
+            background-color: rgb(250, 240, 101);
+            height: 25px;
+        }
+
+        #result {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .main button:hover {
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3>Eb Bill calculator</h3>
+        <input type="search" id="enter" placeholder="Enter a Value"> <br>
+        <button onclick="convert()">Convert</button>
+        <div id="result">
+
+        </div>
+    </div>
+
+
+    <!-- For first 50 units Rs. 0.75/units 
+    For next 100 units Rs. 1.00/units 
+    For next 100 units Rs. 1.30/units 
+    For unit above 250 Rs. 1.50/units 
+
+    Input 75
+    Output 62.5 -->
+
+    <script>
+        function convert() {
+            let unit = Number(document.getElementById("enter").value)
+            let a;
+            if (unit <= 50) {
+                cost = (unit * 0.75)
+            }
+            else if (unit > 50 && unit <= 150) {
+                cost = 37.5 + (unit - 50) * 1.00;
+            }
+            else if (unit > 150 && unit <= 250) {
+                cost = 37.5 + 100 + (unit - 150) * 1.30
+            }
+            else if (unit > 250) {
+                cost = 37.5 + 100 + 130 + (unit - 250) * 1.50
+            }
+
+
+            let result = document.getElementById("result");
+            result.innerHTML = `${cost} ${"Rupees"}`;
+        }
+        convert()
+    </script>
+</body>
+
+</html>
